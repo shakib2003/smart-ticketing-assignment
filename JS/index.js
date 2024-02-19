@@ -1,3 +1,6 @@
+let totalPrice = 0;
+let sitLeft = 8;
+
 const seats = document.querySelectorAll('.sit');
 // console.log(seats);
 
@@ -15,5 +18,9 @@ for (let index = 0; index < seats.length; index++) {
     const everySitPrice = document.createElement('p');
     everySitPrice.innerText = fare;
     price.appendChild(everySitPrice);
+    totalPrice += fare;
+    document.getElementById('total-price').innerText = totalPrice;
+    setBackgroundColor(seat);
   })
 }
+
